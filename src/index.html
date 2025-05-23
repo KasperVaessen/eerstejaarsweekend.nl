@@ -13,6 +13,15 @@
 
   <body class="bg-white">
     <main class="relative">
+        <div id="navbar" class="sm:hidden w-full h-16 bg-secondary-dark sticky top-0 z-30">
+            <div class="flex justify-end items-center px-sm h-full w-full">
+                <button id="menu-button" class="menu-button" onclick="toggleMenu()">
+                    <span class="bar top"></span>
+                    <span class="bar middle"></span>
+                    <span class="bar bottom"></span>
+                </button>
+            </div>
+        </div>
         <div class="bg-[url('../assets/ijsjes.jpg')] bg-cover bg-center h-[calc(100vh-4rem)]">
             <div id="hero" class="h-full w-full bg-secondary-light/70">
                 <img src="../assets/beeldmerk.svg" alt="Logo" class="w-36 p-5 text-black">
@@ -27,15 +36,14 @@
                 </div>
             </div>
         </div>
-        <div id="navbar" class="w-full h-16 bg-secondary-dark sticky top-0 z-40">
-            <div class="hidden sm:flex 2xl:container mx-auto px-xl space-x-xl items-center h-full justify-center text-white">
+        <div id="navbar" class="hidden sm:block w-full h-16 bg-secondary-dark sticky top-0 z-30">
+            <div class="flex 2xl:container mx-auto px-xl space-x-xl items-center h-full justify-center text-white">
                 <a href="#about">About</a>
                 <a href="#pictures">Pictures</a>
                 <a href="#study-assocation">Study Association</a>
                 <a href="#FAQ">FAQ</a>
                 <a href="#about-us">About Us</a>
                 <a href="#contact">Contact</a>
-                
             </div>
         </div>
 
@@ -178,6 +186,17 @@
 
             <h3 class="mt-sm">Questions about the OWee?</h3>
             <p>For questions about the OWee or about your payment, you can contact the <a href="https://owee.info/contact">OWee</a> directly.</p>
+        </div>
+
+        <div id="mobile-menu">
+            <ul class="mt-3xl text-white text-3xl space-y-md mx-md">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#pictures" onclick="toggleMenu()">Pictures</a></li>
+                <li><a href="#study-assocation" onclick="toggleMenu()">Study Association</a></li>
+                <li><a href="#FAQ" onclick="toggleMenu()">FAQ</a></li>
+                <li><a href="#about-us" onclick="toggleMenu()">About Us</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
         </div>
     </main>
     <footer class="bg-secondary-dark text-white text-center py-4">

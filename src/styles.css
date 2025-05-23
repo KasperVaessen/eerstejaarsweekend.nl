@@ -117,3 +117,95 @@ details[open] summary::after {
     max-width: 100%;
   }
 }
+
+#mobile-menu {
+    @apply sm:hidden fixed h-full w-full bg-secondary-dark top-0 left-[100vw] z-20 transition-[left] duration-300 ease-in-out;
+}
+
+#mobile-menu.open {
+    @apply left-0;
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.bar {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s ease all;
+  border-radius: 2px;
+}
+
+.bar.top {
+  transform: translateY(-8px);
+}
+
+.bar.middle {
+  transform: translateY(0);
+}
+
+.bar.bottom {
+  transform: translateY(8px);
+}
+
+.menu-button.open .bar.top {
+  transform: rotate(45deg);
+}
+
+.menu-button.open .bar.middle {
+  opacity: 0;
+}
+
+.menu-button.open .bar.bottom {
+  transform: rotate(-45deg);
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#mobile-menu ul li {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+#mobile-menu.animate ul li {
+  animation: fadeSlideIn 0.3s ease forwards;
+}
+
+#mobile-menu.animate ul li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+#mobile-menu.animate ul li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#mobile-menu.animate ul li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+#mobile-menu.animate ul li:nth-child(4) {
+  animation-delay: 0.2s;
+}
+#mobile-menu.animate ul li:nth-child(5) {
+  animation-delay: 0.25s;
+}
+#mobile-menu.animate ul li:nth-child(6) {
+  animation-delay: 0.3s;
+}
