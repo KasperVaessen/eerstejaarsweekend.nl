@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
-    "build": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
+    "build": "mkdir -p dist && cp src/index.html dist/ && cp src/*.js dist/ && tailwindcss -i ./src/styles.css -o ./dist/dist/styles.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kasper Vaessen",
