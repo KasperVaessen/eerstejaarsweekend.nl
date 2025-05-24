@@ -65,7 +65,7 @@ summary::-webkit-details-marker {
 
 /* Custom arrow */
 summary::after {
-    content: '▶';
+    content: '▷';
     position: absolute;
     right: 0;
     top: 0;
