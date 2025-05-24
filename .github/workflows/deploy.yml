@@ -26,4 +26,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/KasperVaessen/eerstejaarsweekend.nl:latest
+          tags: ghcr.io/kaspervaessen/eerstejaarsweekend.nl:latest
